@@ -19,10 +19,10 @@ jobs:
             - name: "Setup vercel cli"
               run: npm install -g vercel
 
-        #    - name: "Downloads build files"
-         #     uses: actions/download-artifact@v4
-        #      with: 
-        #         name: build
+            - name: "Downloads build files"
+              uses: actions/download-artifact@v4
+              with: 
+                name: build
             - name: "Deploy to vercel"
               run: vercel ==prod --token =${{secrets.VERCEL_TOKEN}} --confirm --name=cicdproject
-             
+              
