@@ -27,5 +27,5 @@ jobs:
                 github-token: ${{github.token}}
 
             - name: "Deploy to vercel"
-              run: vercel ==prod --token =${{secrets.VERCEl_TOKEN}} --confirm --name=testapp
+              run: vercel --prod --token=${{secrets.VERCEL_TOKEN}} --confirm --name=testapp
               
