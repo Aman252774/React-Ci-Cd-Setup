@@ -2,7 +2,7 @@ name: "CD Pipeline"
 
 on: 
     workflow_run:
-        workflows: ["Sample React CI Pipeline / Workflow"] #Which workflow you want to technically target.(kaun se ci workflow ko deploy karna chahate ho.)
+        workflows: ["Sample React CI Pipeline/Workflow"] #Which workflow you want to technically target.(kaun se ci workflow ko deploy karna chahate ho.)
         types:
             - completed
 jobs: 
