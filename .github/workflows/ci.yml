@@ -39,3 +39,9 @@ jobs:
               with:
                 name: dist
                 path: build
+       
+            - name: "Install pm2 globally"
+              run: npm install pm2 -g
+
+            - name: "Deploy the aws"
+              run: pm2 start src/App.js
