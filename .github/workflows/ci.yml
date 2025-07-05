@@ -8,7 +8,7 @@ on:
 
 jobs:
     build-and-test:
-        runs-on: self-hosted
+        runs-on: ubuntu-latesrt
 
         steps:
             - name: "Setup Node JS"
@@ -20,10 +20,10 @@ jobs:
               run: node --version
 
             - name: "Clone the repository"
-              uses: actions/checkout@v2
+              uses: actions/checkout@v2 #uses: This is actual predefined action.
 
             - name: "Install the dependencies"
-              run: npm install
+              run: npm install #run: This just runs a node basic command.
 
             - name: "List directories"
               run: ls
@@ -40,8 +40,8 @@ jobs:
                 name: dist
                 path: build
        
-            - name: "Install pm2 globally"
-              run: npm install pm2 -g
+           # - name: "Install pm2 globally"
+            #  run: npm install pm2 -g
 
-            - name: "Deploy the aws"
-              run: pm2 start src
+           # - name: "Deploy the aws"
+           #   run: pm2 start src
